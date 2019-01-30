@@ -1,0 +1,38 @@
+{
+  "name": "theventchallenge",
+  "version": "1.0.0",
+  "description": "Prove of experiance",
+  "private": true,
+  "proxy": "http://localhost:3001/",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "./node_modules/concurrently/bin/concurrently.js - kill-others \"npm run server:dev\" \"npm run client\"",
+    "server:dev": "cd server && nodemon index.js",
+    "client": "cd client && npm start",
+    "server": "cd server && npm start",
+    "client:build": "cd client && npm run build",
+    "copy:build": "node helpers/moveBuildFiles.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AhmedBHameed/theVentChallenge.git"
+  },
+  "keywords": [
+    "Challenge"
+  ],
+  "author": "AhmedBHameed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AhmedBHameed/theVentChallenge/issues"
+  },
+  "homepage": "https://github.com/AhmedBHameed/theVentChallenge#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.0",
+    "nodemon": "^1.18.9"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "shelljs": "^0.8.3"
+  }
+}
