@@ -48,4 +48,6 @@ If you have any questions let us know.
   - Implement Job-Cron to prevent hammering the domain [00:16:38 Minutes done].
   - Implement HTML email body [01:24:22 Minutes done].
 
-- Some enhancement and documentation.
+- Some enhancement and documentation [00:53:04 Minutes done].
+
+**In general i also search for some implementation while doing the app and for that i would say the app took me 1.5 working days in total**
