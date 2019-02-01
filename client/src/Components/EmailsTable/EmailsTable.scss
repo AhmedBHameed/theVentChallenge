@@ -1,5 +1,5 @@
 %smoothRounds {
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .emailsTableHeader {
@@ -9,7 +9,7 @@
 }
 
 .EmailTable {
-  background: lightgreen;
+  background: #757575;
   max-height: 600px;
   overflow: hidden;
   width: 100%;
@@ -30,9 +30,10 @@
   width: 100%;
   position: relative;
   @extend %smoothRounds;
-  background: lightblue;
-  margin: 5px;
+  background: #616161;
+  margin: 5px 0;
   padding: 5px;
+  color: white;
 }
 
 .EmailTable_row_caption {
@@ -40,6 +41,8 @@
   font-size: 1.2rem;
   margin-left: 10px;
   @extend %smoothRounds;
+  font-style: italic;
+  font-size: 1.3rem;
 }
 
 .EmailTable_row_delete {
@@ -52,6 +55,7 @@
   background: lightcoral;
   opacity: 0.7;
   color: red;
+  cursor: pointer;
 }
 
 .EmailTable_row_delete_icon {

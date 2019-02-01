@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import "./EmailsTable.scss";
 import PropTypes from "prop-types";
 
-// Services
-import emailService from "../../Services/EmailsValidation";
-
 class EmailsTable extends Component {
   static propTypes = {
     emails: PropTypes.arrayOf(PropTypes.string),
@@ -20,7 +17,9 @@ class EmailsTable extends Component {
     const { emails, onDelete } = this.props;
     return (
       <div>
-        <h4 className="emailsTableHeader">Emails list to send them you joke</h4>
+        <h4 className="emailsTableHeader">
+          Emails list to send them your joke sorted by domain and name
+        </h4>
         <div className="EmailTable">
           <ul className="EmailTable_list">
             {emails.length ? (

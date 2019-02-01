@@ -1,14 +1,14 @@
 "use strict";
-// Load environment variables from .env or .local.env file, where API keys and passwords are configured
-const dotenv = require("dotenv");
-dotenv.config({
-  path: process.env.NODE_ENV === "production" ? "../.env" : "../.env" // We can select different file for development
-});
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const pug = require("pug");
 const cron = require("node-cron");
+const dotenv = require("dotenv");
+// Load environment variables from .env or .local.env file, where API keys and passwords are configured
+dotenv.config({
+  path: process.env.NODE_ENV === "production" ? "../.env" : "../.env" // We can select different file for development
+});
 
 // Services
 const mailTrap = require("./Services/EmailSender");
@@ -33,9 +33,6 @@ app.use((req, res, next) => {
   next();
 });
 
-// Send static files
-app.use("/", express.static(path.join(__dirname, "public")));
-
 // Random joke come from node server.
 app.get("/api/joks/random", RandomJokes);
 app.post("/api/joks/send", ReceiveJoks);
@@ -49,7 +46,7 @@ cron.schedule("0-59/5 * * * * *", async () => {
       joke: email.joke
     });
 
-    // setup email data with unicode symbols
+    // setup email data
     let mailOptions = {
       from: '"Crazy bot 👻" <mailtrap@assignment.at>', // sender address
       to: email.emails, // list of receivers

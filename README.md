@@ -38,11 +38,14 @@ If you have any questions let us know.
   - Build Axios service for api calls. [00:25:41 Minutes done].
   - Build email service to [sort email, grab emails, store emails, check emails, check existance [01:38:23 Minutes done].
   - Bind buttons with axios [00:31:32 Minutes done].
-  - Build notification message.
+  - Build notification message [00:44:23 Minutes done].
 
 - Back-end tasks
+
   - Implement End-point with random jokes [00:23:33 Minutes done].
   - Implement End-point to recieve joke with list of emails to send [01:01:37 Minutes done].
   - Implement XSS security service [00:26:19 Minutes done].
   - Implement Job-Cron to prevent hammering the domain [00:16:38 Minutes done].
   - Implement HTML email body [01:24:22 Minutes done].
+
+- Some enhancement and documentation.

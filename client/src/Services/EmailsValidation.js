@@ -4,13 +4,13 @@ class Email {
   }
   isValid(email = "") {
     const regExp = new RegExp(
-      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/ // eslint-disable-line
     );
     return regExp.test(email);
   }
   isExists(email = "") {
     const emails = this.grab();
-    return emails.includes(email);
+    return emails.includes(email.toLowerCase());
   }
   grab() {
     if (window.localStorage && localStorage.getItem("emails") !== null) {
@@ -21,7 +21,7 @@ class Email {
   store(email = "") {
     if (window.localStorage) {
       let emails = this.grab();
-      emails.push(email);
+      emails.push(email.toLowerCase());
       emails = this.sort(emails).by("domain");
       emails = this.sort(emails).by("name");
       localStorage.setItem("emails", JSON.stringify(emails));

@@ -1,6 +1,8 @@
 const nodemailer = require("nodemailer");
 
-// create reusable transporter object using the default SMTP transport
+/**
+ * Create reusable transporter object using the default SMTP transport
+ */
 let transporter = nodemailer.createTransport({
   host: process.env.MAIL_ADDRESS,
   port: process.env.MAIL_PORT,

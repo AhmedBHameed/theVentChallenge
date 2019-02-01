@@ -7,21 +7,30 @@
 .InputBox_form_button {
   height: 40px;
   width: 100%;
+  font-size: 1.2rem;
+  border: 0;
 }
 
 .InputBox_form_input,
 .InputBox_form_button {
-  border-radius: 15px;
+  border-radius: 10px;
   text-align: center;
 }
 
 .InputBox_form_input {
   margin-right: 1%;
   width: 82%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #f5f5f5;
 }
 
 .InputBox_form_button {
   width: 17%;
+  background: #03a9f4;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .InputBox_alert {

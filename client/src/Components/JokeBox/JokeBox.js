@@ -2,9 +2,6 @@ import React, { Component } from "react";
 import "./JokeBox.scss";
 import PropTypes from "prop-types";
 
-// Services
-import http from "../../Services/Http";
-
 class JokeBox extends Component {
   static propTypes = {
     sendAJoke: PropTypes.func,
@@ -45,11 +42,7 @@ class JokeBox extends Component {
             value={joke}
             readOnly
           />
-          <input
-            className="JokeBox_send"
-            type="submit"
-            value="Make them laugh ;)"
-          />
+          <input className="JokeBox_send" type="submit" value="Send the joke" />
         </form>
       </div>
     );

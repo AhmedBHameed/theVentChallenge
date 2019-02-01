@@ -1,5 +1,12 @@
+.headCenter {
+  text-align: center;
+}
+.smallIcon {
+  width: 100px;
+  display: inline-block;
+}
 .home_container {
-  width: 50%;
+  width: 90%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -14,4 +21,39 @@
 .email_container {
   width: 100%;
   padding: 15px;
+}
+
+// I can do it as mixins but they are just here used.
+// Mobile screens
+// CSS should start with mobile screen and go up with the space accordingly
+
+// @media (max-width: 575.98px) {
+//   .home_container {
+//     width: 90%;
+//   }
+// }
+
+// Tablet screens
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .home_container {
+    width: 80%;
+  }
+}
+// Medium screens
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .home_container {
+    width: 80%;
+  }
+}
+// Big screens
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .home_container {
+    width: 70%;
+  }
+}
+// X large Big screens
+@media (min-width: 1200px) {
+  .home_container {
+    width: 50%;
+  }
 }

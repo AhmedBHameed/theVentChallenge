@@ -4,6 +4,13 @@ const errorHandler = require("../Services/errorHandler");
 
 global.FIFO_EMAILS = [];
 
+/**
+ * Recieve joke on POST method. It will clean any string passed on the object with the respect of model shape.
+ * If the model shape not mathed an error of 422 [UNPROCESSABLE ENTITY] will passed to the client.
+ * Otherwise it will schedule for sending the joke by email and send a result of success.
+ * @param {Express Request} req
+ * @param {Express Response} res
+ */
 const ReceiveJoks = (req, res) => {
   let data = req.body;
   res.setHeader("Content-Type", "application/json;charset=UTF-8");
@@ -17,8 +24,12 @@ const ReceiveJoks = (req, res) => {
       return;
     }
   }
-  FIFO_EMAILS.push(data);
-  res.send({ success: "Email has been scheduled for sending." });
+  if (data.emails.split(", ")[0]) {
+    FIFO_EMAILS.push(data);
+    res.send({ success: "Email has been scheduled for sending." });
+  } else {
+    res.status(422).send(errorHandler("No emails provided!!"));
+  }
 };
 
 module.exports = ReceiveJoks;
