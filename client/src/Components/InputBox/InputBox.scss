@@ -1,0 +1,31 @@
+.InputBox {
+  width: 100%;
+}
+
+.InputBox_form,
+.InputBox_form_input,
+.InputBox_form_button {
+  height: 40px;
+  width: 100%;
+}
+
+.InputBox_form_input,
+.InputBox_form_button {
+  border-radius: 15px;
+  text-align: center;
+}
+
+.InputBox_form_input {
+  margin-right: 1%;
+  width: 82%;
+}
+
+.InputBox_form_button {
+  width: 17%;
+}
+
+.InputBox_alert {
+  color: red;
+  margin-top: 15px;
+  font-size: 1rem;
+}

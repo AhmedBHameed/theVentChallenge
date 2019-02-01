@@ -28,14 +28,21 @@ If you have any questions let us know.
 
 ## TODOS tasks:
 
-- Prepare directory with boiler plate for react and nodejs environment using concurrently [29:24 Minutes done].
+- Prepare directory with boiler plate for react and nodejs environment using concurrently [00:29:24 Minutes done].
 - Front-end tasks
-  - The interface is simple which content of header text and some other components bellow the header. It is centered.
-  - Build UI components for Input box with button to add new email address. It has result field for error messages.
-  - Implement validation (email validation).
-  - Build emails box to show all emails that will send to and store them in localstorage.
-  - Build Axios service for api calls.
-  - Build service to check if the new emails is already exits and return boolean.
-  - Build service to sort email by [domain, name] in sequance.
+
+  - The interface is simple which content of header text and some other components bellow the header. It is centered [00:16:31 Minutes done].
+  - Build UI components for Input box with button to add new email address. It has result field for error messages. [01:02:23 Minutes done].
+  - Email table list to show all emails stored to send them the joke with delete functionality. [01:25:03 Minutes done].
+  - JokeBox to fetch jokes and 2 button one for select another joke and the other to send it to emails listed in emails tabl. [00:45:41 Minutes done].
+  - Build Axios service for api calls. [00:25:41 Minutes done].
+  - Build email service to [sort email, grab emails, store emails, check emails, check existance [01:38:23 Minutes done].
+  - Bind buttons with axios [00:31:32 Minutes done].
+  - Build notification message.
+
 - Back-end tasks
-  - .
+  - Implement End-point with random jokes [00:23:33 Minutes done].
+  - Implement End-point to recieve joke with list of emails to send [01:01:37 Minutes done].
+  - Implement XSS security service [00:26:19 Minutes done].
+  - Implement Job-Cron to prevent hammering the domain [00:16:38 Minutes done].
+  - Implement HTML email body [01:24:22 Minutes done].
