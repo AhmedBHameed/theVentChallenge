@@ -24,7 +24,9 @@ If you have any questions let us know.
 - Do `npm install` or `yarn`.
 - Get into `client` directory using `cd client` then install react modules `npm install` or `yarn`.
 - Return to the root filder of the project.
-- Run `npm run s`
+- Make sure to set up your smtp server configuration in the `.env` for email configuration.
+- Run `npm run start:dev` or `yarn start:dev`.
+- Have fun.
 
 ## TODOS tasks:
 
